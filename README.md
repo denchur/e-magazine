@@ -11,9 +11,12 @@ Django 2.2.19
 ```
 pip install -r requirements.txt
 ``` 
-- В папке с файлом manage.py выполните команду:
+- В папке с файлом manage.py выполните команды:
 ```
+python3 manage.py createsuperuser
 python3 manage.py runserver
 ```
+### Настройка
+- Перейдите в админку /admin добавьте товары, категории , статусы заказа
 ### Авторы
 Чуриков Денис
