@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --color-white-primary: white;
+  --color-black-primary: #000000;
+  --color-black-primary-shadow: #0000002e;
+  --color-success: rgb(0, 219, 58);
+  --color-black-min-opacity: rgba(0, 0, 0, 0.1);
+  --main-font-family: "Montserrat", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--main-font-family);
+  background: var(--color-white-primary);
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+}
+header,
+footer {
+  padding: 0 1rem;
+}
+
+header {
+  background: var(--color-white-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* header  */
+.logo {
+  max-height: 5rem;
+  cursor: pointer;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 0.5rem;
+}
+.button {
+  font-family: var(--main-font-family);
+  font-size: 1rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.3rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.button-content__icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+a {
+  color: var(--color-black-primary);
+}
+
+/* primary button styles */
+.primary-button {
+  background-color: var(--color-black-primary);
+  color: var(--color-white-primary);
+  border: 0.1rem solid var(--color-black-primary);
+}
+
+.primary-button:hover {
+  opacity: 70%;
+}
+
+.primary-button .button-content__title {
+  color: var(--color-white-primary);
+}
+.primary-button .button-content__icon {
+  fill: var(--color-white-primary);
+}
+
+.logout {
+  transform: scale(-1, 1);
+}
+
+/* secondary button styles */
+
+.secondary-button {
+  border: 0.1rem solid var(--color-white-primary);
+}
+
+.secondary-button:hover {
+  border: 0.1rem solid var(--color-black-primary);
+}
+
+.secondary-button .button-content__title {
+  color: var(--color-black-primary);
+}
+.secondary-button .button-content__icon {
+  fill: var(--color-black-primary);
+}
+
+main {
+  flex: 1;
+}
+
+/* footer */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-black-primary);
+}
+
+.footer-container-top {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about > p {
+  color: var(--color-white-primary);
+  font-size: 1rem;
+  max-width: 30rem;
+}
+
+.about > p > span {
+  font-weight: bold;
+}
+
+.social,
+.about {
+  padding: 1rem 1rem 0.5rem 1rem;
+}
+
+.social > .icon-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.social__title {
+  color: var(--color-white-primary);
+}
+
+.icon-container__icon {
+  width: 3rem;
+  height: 4rem;
+  fill: var(--color-white-primary);
+  cursor: pointer;
+}
+.icon-container__icon:hover {
+  transform: scale(1.2);
+}
+
+.footer-container-bottom {
+  flex-shrink: 0;
+  padding: 0.5rem;
+}
+
+.footer-container-bottom > h2 {
+  text-align: center;
+  color: var(--color-white-primary);
+}
+
+.columns {
+  display: flex;
+  flex-direction: column;
+}
+
+.rows-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section {
+  min-height: 100vh;
+}
+
+.main-section {
+  flex: 1;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////// */
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+  position: relative;
+  padding: 3rem 4rem;
+}
+
+.container-main__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+}
+.container-main__title > h2 {
+  font-size: 1.5rem;
+}
+
+.container-main-content__image {
+  display: flex;
+  justify-content: center;
+}
+
+.container-main-content__image > img {
+  object-fit: fill;
+  width: 40rem;
+  height: 20rem;
+  border-radius: 2rem;
+  box-shadow: 3px 4px 8px 5px var(--color-black-primary-shadow);
+}
+
+.container-main-content__about-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.container-main-content__about-info > h3 {
+  text-align: center;
+  font-size: 2rem;
+}
+.container-main-content__about-info > p {
+  font-size: 1.5rem;
+}
+
+.advantages {
+  display: flex;
+  justify-content: space-between;
+}
+
+.advantage-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.advantage-card__icon > svg {
+  width: 10rem;
+  height: 10rem;
+  fill: var(--color-black-primary);
+}
+
+.advantage-card__title {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
